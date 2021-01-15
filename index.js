@@ -52,5 +52,9 @@ nextISSTimesForMyLocation((error, passTimes) => {
     return console.log("It didn't work!", error);
   }
 
-  timeConverter(passTimes);
+  // timeConverter(passTimes); // commented out to not double execute when exported to index2.js,
+  // comment line 55 back in for functionality for iss.js/index.js case
 });
+
+
+module.exports = { timeConverter };
